@@ -1,0 +1,5 @@
+name: JabkiBoxes
+main: space.rimgro.jabkiBoxes.JabkiBoxesPlugin
+version: 1.0
+api-version: 1.16
+description: жабкибоксы да

@@ -1,0 +1,45 @@
+boxes:
+  jabkibox:
+    drops:
+      stick:
+        chance: 40
+        display_item:
+          material: STICK
+          displayname: "<yellow>だ。"
+          lore: |-
+            line1
+            line2
+        on_drop:
+          - type: GIVE
+            item:
+              material: STICK
+              displayname: "<yellow>だ。"
+              amount: 5
+              lore: |-
+                line1
+                line2
+          - type: PLAYSOUND
+            sound: block.anvil.break
+      cool_sound:
+        chance: 60
+        display_item:
+          material: CHEST
+          displayname: "<yellow>だ。 крутой звук да"
+          lore: |-
+            line1
+            line2
+        on_drop:
+          - type: PLAYSOUND
+            sound: ambient.cave
+    gui:
+      title: "Jabkibox"
+      scroll_time: 130
+      placeholder_item:
+        material: TINTED_GLASS
+        displayname: ""
+      center_placeholder_item:
+        material: BLACK_GLAZED_TERRACOTTA
+        displayname: ""
+      on_scroll:
+        - type: PLAYSOUND
+          sound: block.dispenser.dispense
