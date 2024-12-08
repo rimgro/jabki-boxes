@@ -1,4 +1,10 @@
+placeholders:
+  prefix: "<gray>[<gradient:#33C500:#5EEB6C>JabkiBox</gradient>]:</gray>"
+
 commands:
-  reload: "<green>⇄ Конфигурация перезагружена."
-  bind: "<green>Этот предмет теперь является боксом."
-  unbind: "<green>Этот предмет больше не является боксом."
+  reload: "%prefix% <green>⇄ Конфигурация перезагружена"
+  bind: "<green>Этот предмет теперь является боксом '%box%'"
+  unbind: "<yellow>Этот предмет больше не является боксом"
+
+unknown-box: "<red>Ошибка: неизвестный ящик '%box%'"
+no-permission-to-open: "<red>У вас нет прав открывать этот ящик"

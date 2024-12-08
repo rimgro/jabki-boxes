@@ -1,3 +1,2 @@
-
-rootProject.name = "jabkiBoxes"
+rootProject.name = "JabkiBox"
 

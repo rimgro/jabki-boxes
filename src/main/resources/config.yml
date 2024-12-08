@@ -1,8 +1,10 @@
 boxes:
   jabkibox:
+    displayname: "<gradient:#33C500:#5EEB6C>Жабкибокс</gradient>"
     drops:
       stick:
-        chance: 40
+        displayname: "Палка"
+        chance: 25
         display_item:
           material: STICK
           displayname: "<yellow>だ。"
@@ -21,16 +23,36 @@ boxes:
           - type: PLAYSOUND
             sound: block.anvil.break
       cool_sound:
-        chance: 60
+        displayname: "<yellow>だ。 крутой звук да"
+        chance: 25
         display_item:
           material: CHEST
           displayname: "<yellow>だ。 крутой звук да"
-          lore: |-
-            line1
-            line2
         on_drop:
           - type: PLAYSOUND
             sound: ambient.cave
+      command:
+        chance: 25
+        displayname: "<rainbow>Ноу, нот гонна дай тунайт"
+        display_item:
+          material: TOTEM_OF_UNDYING
+          displayname: "<rainbow>Ноу, нот гонна дай тунайт"
+        on_drop:
+          - type: COMMAND
+            command: "give %player-name% minecraft:totem_of_undying"
+      message:
+        displayname: "<aqua>Анекдот"
+        chance: 25
+        display_item:
+          material: PUFFERFISH
+          displayname: "<aqua>Смешно, смеёмся"
+        on_drop:
+          - type: MESSAGE
+            message: <dark_aqua>Идут 100 белых по пустыне. Видят — лежит лампа. Потерли её и из неё появился Джинн. 99 загадали стать чёрными, а сотый, угарая от смеха, загадал, чтобы чёрным стал сам джинн.</dark_aqua>
+    on_any_drop:
+      - type: MESSAGE
+        message: "<gray>%player-name% открыл %box-displayname% и получил %prize-displayname%"
+        broadcast: true
     gui:
       title: "Jabkibox"
       scroll_time: 130
@@ -43,3 +65,4 @@ boxes:
       on_scroll:
         - type: PLAYSOUND
           sound: block.dispenser.dispense
+      close_delay: 40

@@ -1,4 +1,4 @@
-package space.rimgro.jabkiBoxes.actions.core
+package space.rimgro.jabkibox.actions.core
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.core.JsonParser
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.JsonDeserializer
 import com.fasterxml.jackson.databind.JsonNode
 
 //@JsonDeserialize(using = DropActionInstanceDataDeserializer::class)
-interface IDropActionInstanceData{
+interface IDropActionInstanceData {
     @get:JsonProperty("type")
     val action: String
 }
